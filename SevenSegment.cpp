@@ -56,7 +56,7 @@ SevenSegment::SevenSegment(int pins[], int dotPin)
 
 void SevenSegment::display(int digit)
 {
-	display(digit, OFF);
+	display(digit, false);
 }
 
 void SevenSegment::display(int digit, bool dot)
