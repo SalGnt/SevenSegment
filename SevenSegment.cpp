@@ -34,12 +34,12 @@ const byte SIX[SEGMENTS]   = { ON, OFF,  ON,  ON,  ON,  ON,  ON  };
 const byte SEVEN[SEGMENTS] = { ON,  ON,  ON,  OFF, OFF, OFF, OFF };
 const byte EIGHT[SEGMENTS] = { ON,  ON,  ON,  ON,  ON,  ON,  ON  };
 const byte NINE[SEGMENTS]  = { ON,  ON,  ON,  ON,  OFF, ON,  ON  };
-const byte LOW_A[SEGMENTS] = { ON,  ON,  ON,  OFF, ON,  ON,  ON  };
-const byte LOW_B[SEGMENTS] = { OFF, OFF, ON,  ON,  ON,  ON,  ON  };
-const byte LOW_C[SEGMENTS] = { ON,  OFF, OFF, ON,  ON,  ON,  OFF };
-const byte LOW_D[SEGMENTS] = { OFF, ON,  ON,  ON,  ON, OFF,  ON  };
-const byte LOW_E[SEGMENTS] = { ON,  OFF, OFF, ON,  ON,  ON,  ON  };
-const byte LOW_F[SEGMENTS] = { ON,  OFF, OFF, OFF, ON,  ON,  ON  };
+const byte A[SEGMENTS]     = { ON,  ON,  ON,  OFF, ON,  ON,  ON  };
+const byte B[SEGMENTS]     = { OFF, OFF, ON,  ON,  ON,  ON,  ON  };
+const byte C[SEGMENTS]     = { ON,  OFF, OFF, ON,  ON,  ON,  OFF };
+const byte D[SEGMENTS]     = { OFF, ON,  ON,  ON,  ON, OFF,  ON  };
+const byte E[SEGMENTS]     = { ON,  OFF, OFF, ON,  ON,  ON,  ON  };
+const byte F[SEGMENTS]     = { ON,  OFF, OFF, OFF, ON,  ON,  ON  };
 const byte DASH[SEGMENTS]  = { OFF, OFF, OFF, OFF, OFF, OFF, ON  };
 
 SevenSegment::SevenSegment(int pins[], int dotPin)
@@ -67,7 +67,7 @@ void SevenSegment::display(int digit, bool dot)
 	{
 		digitalWrite(_pins[segment], selectedDigit[segment]);
 	}
-	
+
 	if (dot)
 	{
 		setDot(ON);
@@ -123,27 +123,27 @@ const byte* SevenSegment::select(int digit)
 			break;
 
 		case (10):
-			return LOW_A;
+			return A;
 			break;
 
 		case (11):
-			return LOW_B;
+			return B;
 			break;
 
 		case (12):
-			return LOW_C;
+			return C;
 			break;
 
 		case (13):
-			return LOW_D;
+			return D;
 			break;
 
 		case (14):
-			return LOW_E;
+			return E;
 			break;
 
 		case (15):
-			return LOW_F;
+			return F;
 			break;
 
 		default:
