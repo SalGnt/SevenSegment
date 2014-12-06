@@ -8,11 +8,15 @@ Usage Instructions
 ------------------
 First of all create an instance of the _SevenSegment_ class
 
-    SevenSegment sevenSeg(pins, dotPin);
+```arduino
+SevenSegment sevenSeg(pins, dotPin);
+```
 
 and then use the `display(int digit)` function to display a symbol.
 
-    sevenSeg.display(i);
+```arduino
+sevenSeg.display(i);
+```
 
 The library provides support for the sixteen hexadecimal symbols. The symbols can be displayed using the numbers `0-15`. A _dash_ will be displayed as default.
     
